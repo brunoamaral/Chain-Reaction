@@ -1,0 +1,216 @@
+@import "config.less";
+
+body, html {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	.fontnormal;
+	background-color: @background_color;
+	color: @font_color;
+}
+
+#bgoverlay {
+	display: none;
+	background: @background_color_light;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 990;
+	.alpha(55);
+}
+
+#instructionsdiv {
+	display: none;
+	position: absolute;
+	top: 200px;
+	left: 120px;
+	width: 400px;
+	color: @background_color;
+	background-color: @font_color_light;
+	z-index: 999;
+	.shadowed;
+	.rounded_corners;
+	padding: 20px;
+}
+
+#title {
+	margin-bottom: 40px;
+}
+
+#title h1 {
+	line-height: 0pt;
+}
+
+#content {
+	padding: 10px;
+	margin-left: 30px;
+	width: 620px;
+	height: 600px;
+	float: left;
+}
+
+#header {
+	.shadowed;
+	.rounded_corners;
+	border: 1pt solid @font_color;
+	width: 600px;
+	height: 30px;
+}
+
+#level {
+	float: left;
+}
+
+#goal {
+	float: left;
+}
+
+#goalval.notgoal {
+	color: @error_color;
+}
+
+#goalval.goal {
+	color: @ok_color;
+}
+
+div.attr {
+	float: left;
+	padding: 5px 20px 6px 20px;
+	background-color: @font_color;
+	color: @background_color;
+}
+div.val {
+	float: left;
+	padding: 5px 20px 6px 20px;
+}
+
+#instructions {
+	cursor: pointer;
+	padding: 5px 20px 6px 20px;
+	width: 200px;
+	float: right;
+	text-align: center;
+	border-left: 1pt solid @font_color;
+	background-color: @font_color_light;
+	color: @background_color_light;
+}
+
+canvas {
+	background-color: @background_color_light - #111;
+	.shadowed;
+	.rounded_corners;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+#sidebar {
+	margin-top: 110px;
+	float: left;
+	width: 310px;
+	height: 550px;
+}
+
+a {
+	text-decoration: none;
+	color: @font_color_light;
+	font-weight: bold;
+}
+
+label {
+	font-weight: bold;
+}
+
+p.note {
+	font-size: 8pt;
+	line-height: 12pt;
+}
+
+p.error {
+	color: @error_color;
+}
+
+#creator {
+	font-size: 9pt;
+	color: @background_color;
+	background-color: @font_color_light;
+	.rounded_corners;
+	.shadowed;
+	padding: 5px;
+	width: 200px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+#creator a {
+	color: @background_color;
+}
+
+#share {
+	margin: 20px 0px;
+}
+
+#twshare, #fbshare {
+	float: left;
+}
+
+#leaderboard {
+	margin-top: 10px;
+	font-size: 10pt;
+}
+
+#leaderboard h1 {
+	line-height: 16pt;
+}
+
+#leaderboard ol {
+	margin-top: 0px;
+	margin-left: 20px;
+	padding: 0px;
+}
+
+#leaderboard li {
+	margin-left: 10px;
+	padding: 0px;
+	line-height: 20pt;
+}
+
+input {
+	.rounded_corners;
+	.fontnormal;
+	color: @font_color_light;
+	background-color: @background_color_light;
+	padding: 5px;
+	outline: none;
+	border: 1pt solid @font_color;
+}
+
+button {
+	cursor: pointer;
+	border: 0px;
+	.rounded_corners;
+	.shadowed;
+	.fontnormal;
+	background-color: @background_color;
+	color: @font_color_light;
+	padding: 8px 20px 8px 20px;
+	outline: none;
+}
+
+button.fw {
+	background-color: @ok_color;
+}
+
+button.bk {
+	background-color: @error_color;
+}
+
+button.fw:hover {
+	background-color: @ok_color + #111;
+}
+
+button.bk:hover {
+	background-color: @error_color + #111;
+}

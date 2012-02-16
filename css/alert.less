@@ -1,0 +1,35 @@
+@import "config.less";
+
+#popup_container {
+	.fontnormal;
+	background: @background_color_light;
+	border: solid 1px @font_color_light;
+	color: @font_color_light;
+	.rounded_corners;
+}
+
+#popup_title {
+	font-size: 14pt;
+	color: @font_color;
+	background: @background_color;
+	border: solid 0px @font_color;
+	border-bottom: solid 1px @font_color;
+}
+
+#popup_content {
+	background: 16px 16px;
+	padding: 1em 1.75em;
+	margin: 0em;
+}
+
+#popup_content.alert {
+	background-image: none;
+}
+
+#popup_content.confirm {
+	background-image: none;
+}
+
+#popup_content.prompt {
+	background-image: none;
+}
